@@ -1,0 +1,43 @@
+site_name: Data Structure And Algorithm
+nav:
+  - 一. 介绍: index.md
+  - 二. QuickSort: quickSort.md
+  - 三. BinaryTree: 
+      - 1. binaryTree: BinaryTree/binaryTree.md
+      - 2. bst: BinaryTree/binarySearchTree.md
+      - 3. avlTree: BinaryTree/AVLTree.md
+      - 4. rbTree: BinaryTree/redblackTree.md
+  - 四. Dynamic Programming:
+      - 1. backpack: backpack.md
+      - 2. sequence:
+        - 2.1 Best Time to Buy and Sell Stock: BuyAndSellStock.md
+theme:
+  name: 'material'
+  font: 
+    text: 'Consolas'
+    code: 'Consolas Mono'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: true
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
