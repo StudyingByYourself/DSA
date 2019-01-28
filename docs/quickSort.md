@@ -7,7 +7,7 @@
 假设我们现在对“6  1  2 7  9  3  4  5 10  8”这个10个数进行排序。首先以第一个数6作为基准数吧。接下来，需要将这个序列中所有比基准数大的数放在6的右边，比基准数小的数放在6的左边，类似下面这种排列：
 3  1  2 5  4  6  9 7  10  8
 <center>
-![在这里插入图片描述](https://github.com/StudyingByYourself/DSA/blob/master/docs/img/quickSort.gif)
+![在这里插入图片描述](https://s2.ax1x.com/2019/01/21/kibYK1.gif)
 </center>
 
 ???实现代码
@@ -113,7 +113,7 @@
 然而当需要排序的对象中存在大量重复元素时，则需要进一步优化。
 
 **动画演示**
-![在这里插入图片描述](https://github.com/StudyingByYourself/DSA/blob/master/docs/img/%E4%B8%89%E8%B7%AF%E5%BF%AB%E6%8E%92.gif)
+![在这里插入图片描述](https://s2.ax1x.com/2019/01/21/kibNb6.gif)
 
 ??? 代码实现
 	```java

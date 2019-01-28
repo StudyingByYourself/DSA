@@ -13,7 +13,7 @@
 
 	例如  3->1->4->2->6->7->9->3 在[3,5]上翻转，
 
-	![](https://github.com/StudyingByYourself/DSA/blob/master/docs/img/LinkedListChangePosition.png)
+	![](https://s2.ax1x.com/2019/01/29/kM5yz6.png)
 
 	```java
 	ListNode dummy = new ListNode(0);
