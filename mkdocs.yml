@@ -11,6 +11,10 @@ nav:
       - 1. backpack: backpack.md
       - 2. sequence:
         - 2.1 Best Time to Buy and Sell Stock: BuyAndSellStock.md
+  - 五. LintCode Everyday:  
+      - 1. 双指针与滑动窗口: lintcode.md
+      - 2. 哈希表: hashcode.md 
+      - 3. 链表: linkedlist.md 
 theme:
   name: 'material'
   font: 
