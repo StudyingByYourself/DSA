@@ -1,7 +1,5 @@
 # 链表
 
-
-
 35\. Reverse Linked List
 
 36\. Reverse Linked List II
@@ -15,7 +13,7 @@
 
 	例如  3->1->4->2->6->7->9->3 在[3,5]上翻转，
 
-	![](/img/LinkedListChangePosition.png)
+	![](https://github.com/StudyingByYourself/DSA/blob/master/docs/img/LinkedListChangePosition.png)
 
 	```java
 	ListNode dummy = new ListNode(0);
