@@ -79,4 +79,28 @@ Sort List
 
 223\. Palindrome Linked List
 
+------------------------------------
+
+228\. Middle of Linked List
+
+483\. Convert Linked List to Array List
+
+466\. Count Linked List Nodes
+
+225\. Find Node in Linked List
+
+219\. Insert Node in Sorted Linked List
+
+786\. Linked List Weighted Sum In Reverse Order
+
+217\. Remove Duplicates from Unsorted List
+
+489\. Convert Array List to Linked List
+
+822\. Reverse Order Storage
+
+166\. Nth to Last Node in List
+
+511\. Swap Two Nodes in Linked List
+
 
