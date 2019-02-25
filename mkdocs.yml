@@ -1,22 +1,24 @@
 site_name: Data Structure And Algorithm
 nav:
   - 一. 介绍: index.md
-  - 二. QuickSort: quickSort.md
+  - 二. 线性数据结构: linear.md
   - 三. BinaryTree: 
       - 1. binaryTree: BinaryTree/binaryTree.md
       - 2. bst: BinaryTree/binarySearchTree.md
       - 3. avlTree: BinaryTree/AVLTree.md
       - 4. rbTree: BinaryTree/redblackTree.md
-  - 四. Dynamic Programming:
+  - 四. QuickSort: quickSort.md
+  - 五. Dynamic Programming:
       - 1. backpack: backpack.md
       - 2. sequence:
         - 2.1 Best Time to Buy and Sell Stock: BuyAndSellStock.md
-  - 五. LintCode Everyday:  
+  - 六. LintCode Everyday:  
       - 1. 双指针与滑动窗口: lintcode.md
       - 2. 哈希表: hashcode.md 
       - 3. 链表: linkedlist.md 
       - 4. 栈与队列: stack.md
-  - 六. 回顾:  review.md
+  - 七. 回顾:  review.md
+  - 八. Java:  other.md
 theme:
   name: 'material'
   font: 

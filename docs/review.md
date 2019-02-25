@@ -4,11 +4,11 @@
 
 ### linear
 
-- [ ] Array(可扩展的)
+- [x] Array(可扩容的)
 - [ ] LinkedList(虚拟头结点)
-- [ ] Stack Implements By Array Or LinkedList
+- [x] Stack Implements By Array Or LinkedList
 - [ ] Queue Implements By Array Or LinkedList
-- [ ] LoopQueue
+- [x] LoopQueue
 - [ ] PriorityQueue(MaxHeap)
 - [ ] MaxHeap
 
