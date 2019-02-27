@@ -73,48 +73,6 @@
 			}
 		}
 
-		public void preOrder(Node node) {
-			if (node == null) {
-				return;
-			}
-			System.out.println(node.e);
-			preOrder(node.left);
-			preOrder(node.right);
-		}
-
-		public void inOrder(Node node) {
-			if (node == null) {
-				return;
-			}
-			inOrder(node.left);
-			System.out.println(node.e);
-			inOrder(node.right);
-		}
-
-		public void postOrder(Node node) {
-			if (node == null) {
-				return;
-			}
-			postOrder(node.left);
-			postOrder(node.right);
-			System.out.println(node.e);
-		}
-
-		public void levelOrder() {
-			Queue<Node> queue = new LinkedList<>();
-			queue.add(root);
-			while (!queue.isEmpty()) {
-				Node cur = queue.remove();
-				System.out.println(cur.e);
-				if (cur.left != null) {
-					queue.add(cur.left);
-				}
-				if (cur.right != null) {
-					queue.add(cur.right);
-				}
-			}
-		}
-
 		public E minimum() {
 			if (size == 0) {
 				throw new IllegalArgumentException("BST is empty!");
@@ -354,21 +312,45 @@
 
 ####  5.4.1 非递归实现（not recursion）
 
-??? 栈Stack实现
+??? note "Stack实现preOrder"
 	```java
-	public void preOrder() {
-	    Stack < Node > stack = new Stack < > ();
-	    stack.push(root);
-	    while (!stack.isEmpty()) {
-	        Node cur = stack.pop();
-	        System.out.println(cur.e);
-	        if (cur.right != null) {
-	            stack.push(cur.right);
-	        }
-	        if (cur.left != null) {
-	            stack.push(cur.left);
-	        }
-	    }
+	public void preOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		Stack<Node> stack = new Stack<>();
+		stack.push(node);
+		while (!stack.isEmpty()) {
+			Node cur = stack.pop();
+			System.out.println(cur.e);
+			if (cur.right != null) {
+				stack.push(cur.right);
+			}
+			if (cur.left != null) {
+				stack.push(cur.left);
+			}
+		}
+	}
+	```
+
+??? note "Queue实现levelOrder"
+	```java
+	public void levelOrder() {
+		if (root == null) {
+			return;
+		}
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);
+		while (!q.isEmpty()) {
+			Node cur = q.remove();
+			System.out.println(cur.e);
+			if (cur.left != null) {
+				q.add(cur.left);
+			}
+			if (cur.right != null) {
+				q.add(cur.right);
+			}
+		}
 	}
 	```
 
@@ -384,7 +366,85 @@
 	    preOrder(node.left);
 	    preOrder(node.right);
 	}
+
+	public void inOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		inOrder(node.left);
+		System.out.println(node.e);
+		inOrder(node.right);
+	}
+
+	public void postOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.println(node.e);
+	}
 	```
 
+### 5.5 判断是否为二分搜索树或者是否为平衡二叉树
+
+??? java版
+	```java
+	public int getHeight(Node node) {
+		if (node == null) {
+			return 0;
+		}
+		int leftHeight = getHeight(node.left);
+		int rightHeight = getHeight(node.right);
+		return 1 + Math.max(leftHeight, rightHeight);
+	}
+
+	public ArrayList<E> inOrder(Node node, ArrayList<E> list) {
+		if (node == null) {
+			return null;
+		}
+		inOrder(node.left, list);
+		list.add(node.e);
+		inOrder(node.right, list);
+		return list;
+	}
+
+	public boolean isBST() {
+		ArrayList<E> list = new ArrayList<>();
+		list = inOrder(root, list);
+		for (int i = 1; i < list.size(); i++) {
+			if (list.get(i).compareTo(list.get(i - 1)) < 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean isBalanced() {
+		return isBalanced(root);
+	}
+	
+	private boolean isBalanced(Node node) {
+		if (node == null) {
+			return true;
+		}
+		int balanceFactor = getBalanceFactor(node);
+		if (Math.abs(balanceFactor) > 1) {
+			return false;
+		}
+		return isBalanced(node.left) && isBalanced(node.right);
+	}
+	
+	private int getBalanceFactor(Node node) {
+		if (node == null) {
+			return 0;
+		}
+		return getHeight(node.left) - getHeight(node.right);
+	}
+	```
+
+### 5.6 二分搜索树的缺点
+
+当插入有序表时，会退化成一个链表
 
 

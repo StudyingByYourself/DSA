@@ -1,7 +1,7 @@
 site_name: Data Structure And Algorithm
 nav:
   - 一. 介绍: index.md
-  - 二. 线性数据结构: linear.md
+  - 二. Linear Structure: linear.md
   - 三. BinaryTree: 
       - 1. binaryTree: BinaryTree/binaryTree.md
       - 2. bst: BinaryTree/binarySearchTree.md
