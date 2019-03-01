@@ -332,11 +332,11 @@
 
 		boolean isEmpty();
 
-		void push(E e);
+		void enqueue(E e);
 
-		E pop();
+		E dequeue();
 
-		E peek();
+		E getFront();
 	}
 	```
 
@@ -374,7 +374,7 @@
 			return front == tail;
 		}
 
-		public void push(E e) {
+		public void enqueue(E e) {
 			if ((tail + 1) % data.length == front) {
 				resize(getCapacity() * 2);
 			}
@@ -394,7 +394,7 @@
 			tail = size;
 		}
 
-		public E pop() {
+		public E dequeue() {
 			if (isEmpty()) {
 				throw new IllegalArgumentException("Can not pop from an empty Queue");
 			}
@@ -408,7 +408,7 @@
 			return ret;
 		}
 
-		public E peek() {
+		public E getFront() {
 			if (isEmpty()) {
 				throw new IllegalArgumentException("Can not peek from an empty Queue");
 			}
@@ -614,15 +614,15 @@
 			return list.isEmpty();
 		}
 
-		public void push(E e) {
+		public void enqueue(E e) {
 			list.addLast(e);
 		}
 
-		public E pop() {
+		public E dequeue() {
 			return list.removeFirst();
 		}
 
-		public E peek() {
+		public E getFront() {
 			return list.getFirst();
 		}
 		
@@ -637,3 +637,38 @@
 	```
 
 看Java的源代码发现，Java中的Queue是基于双指针的LinkedList实现的。
+
+## PriorityQueue
+
+??? java 
+	```java
+	public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {
+		private MaxHeap<E> maxHeap;
+		
+		public PriorityQueue() {
+			maxHeap = new MaxHeap<>();
+		}
+		
+		public int getSize() {
+			return maxHeap.size();
+		}
+
+		public boolean isEmpty() {
+			return maxHeap.isEmpty();
+		}
+
+		public void enqueue(E e) {
+			maxHeap.add(e);
+		}
+
+		public E dequeue() {
+			return maxHeap.extractMax();
+		}
+
+		public E getFront() {
+			return maxHeap.findMax();
+		}
+	}
+	```
+
+看Java的源代码发现，Java中的PriorityQueue是基于最小堆实现的。
