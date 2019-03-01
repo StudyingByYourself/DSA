@@ -36,7 +36,7 @@
     
     
       
-        <title>2. bst - Data Structure And Algorithm</title>
+        <title>3. bst - Data Structure And Algorithm</title>
       
     
     
@@ -98,7 +98,7 @@
                 Data Structure And Algorithm
               </span>
               <span class="md-header-nav__topic">
-                2. bst
+                3. bst
               </span>
             
           
@@ -181,8 +181,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../linear/" title="二. 线性数据结构" class="md-nav__link">
-      二. 线性数据结构
+    <a href="../../linear/" title="二. Linear Structure" class="md-nav__link">
+      二. Linear Structure
     </a>
   </li>
 
@@ -224,6 +224,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../maxHeap/" title="2. maxHeap" class="md-nav__link">
+      2. maxHeap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -235,11 +247,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        2. bst
+        3. bst
       </label>
     
-    <a href="./" title="2. bst" class="md-nav__link md-nav__link--active">
-      2. bst
+    <a href="./" title="3. bst" class="md-nav__link md-nav__link--active">
+      3. bst
     </a>
     
       
@@ -355,6 +367,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#55" title="5.5 判断是否为二分搜索树或者是否为平衡二叉树" class="md-nav__link">
+    5.5 判断是否为二分搜索树或者是否为平衡二叉树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" title="5.6 二分搜索树的缺点" class="md-nav__link">
+    5.6 二分搜索树的缺点
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -377,8 +403,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AVLTree/" title="3. avlTree" class="md-nav__link">
-      3. avlTree
+    <a href="../AVLTree/" title="4. avlTree" class="md-nav__link">
+      4. avlTree
     </a>
   </li>
 
@@ -389,8 +415,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../redblackTree/" title="4. rbTree" class="md-nav__link">
-      4. rbTree
+    <a href="../redblackTree/" title="5. rbTree" class="md-nav__link">
+      5. rbTree
     </a>
   </li>
 
@@ -703,6 +729,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#55" title="5.5 判断是否为二分搜索树或者是否为平衡二叉树" class="md-nav__link">
+    5.5 判断是否为二分搜索树或者是否为平衡二叉树
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" title="5.6 二分搜索树的缺点" class="md-nav__link">
+    5.6 二分搜索树的缺点
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -792,48 +832,6 @@
             <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
         <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
             <span class="k">return</span> <span class="n">contains</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">preOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
-        <span class="n">preOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
-        <span class="n">preOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">inOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
-        <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">postOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="n">postOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
-        <span class="n">postOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">levelOrder</span><span class="o">()</span> <span class="o">{</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
-        <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
-        <span class="k">while</span> <span class="o">(!</span><span class="n">queue</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
-            <span class="n">Node</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
-            <span class="o">}</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">queue</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
-            <span class="o">}</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
@@ -1063,9 +1061,12 @@
 </details>
 <h3 id="54-traversal-method">5.4 traversal method<a class="headerlink" href="#54-traversal-method" title="Permanent link">&para;</a></h3>
 <h4 id="541-not-recursion">5.4.1 非递归实现（not recursion）<a class="headerlink" href="#541-not-recursion" title="Permanent link">&para;</a></h4>
-<details class="栈stack实现"><summary>栈stack实现</summary><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">preOrder</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">Stack</span> <span class="o">&lt;</span> <span class="n">Node</span> <span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span> <span class="o">&lt;</span> <span class="o">&gt;</span> <span class="o">();</span>
-    <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+<details class="note"><summary>Stack实现preOrder</summary><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">preOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
+    <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
     <span class="k">while</span> <span class="o">(!</span><span class="n">stack</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
         <span class="n">Node</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
@@ -1074,6 +1075,26 @@
         <span class="o">}</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">stack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
+<details class="note"><summary>Queue实现levelOrder</summary><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">levelOrder</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(!</span><span class="n">q</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">Node</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">q</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">cur</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -1089,9 +1110,84 @@
     <span class="n">preOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
     <span class="n">preOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
 <span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">inOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
+    <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">postOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">postOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+    <span class="n">postOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
+<span class="o">}</span>
 </pre></div>
 
 </details>
+<h3 id="55">5.5 判断是否为二分搜索树或者是否为平衡二叉树<a class="headerlink" href="#55" title="Permanent link">&para;</a></h3>
+<details class="java版"><summary>Java版</summary><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kt">int</span> <span class="n">leftHeight</span> <span class="o">=</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">rightHeight</span> <span class="o">=</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">leftHeight</span><span class="o">,</span> <span class="n">rightHeight</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="nf">inOrder</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">,</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">list</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">e</span><span class="o">);</span>
+    <span class="n">inOrder</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">list</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBST</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">list</span> <span class="o">=</span> <span class="n">inOrder</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">list</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">compareTo</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">isBalanced</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isBalanced</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kt">int</span> <span class="n">balanceFactor</span> <span class="o">=</span> <span class="n">getBalanceFactor</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">balanceFactor</span><span class="o">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">isBalanced</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isBalanced</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">int</span> <span class="nf">getBalanceFactor</span><span class="o">(</span><span class="n">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">-</span> <span class="n">getHeight</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
+<h3 id="56">5.6 二分搜索树的缺点<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
+<p>当插入有序表时，会退化成一个链表</p>
                 
                   
                 
@@ -1112,7 +1208,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../binaryTree/" title="1. binaryTree" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../maxHeap/" title="2. maxHeap" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1121,19 +1217,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                1. binaryTree
+                2. maxHeap
               </span>
             </div>
           </a>
         
         
-          <a href="../AVLTree/" title="3. avlTree" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../AVLTree/" title="4. avlTree" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                3. avlTree
+                4. avlTree
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
