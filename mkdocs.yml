@@ -8,18 +8,19 @@ nav:
       - 3. bst: BinaryTree/binarySearchTree.md
       - 4. avlTree: BinaryTree/AVLTree.md
       - 5. rbTree: BinaryTree/redblackTree.md
-  - 四. QuickSort: quickSort.md
-  - 五. Dynamic Programming:
+  - 四. hashtable: hashtable.md
+  - 五. QuickSort: quickSort.md
+  - 六. Dynamic Programming:
       - 1. backpack: backpack.md
       - 2. sequence:
         - 2.1 Best Time to Buy and Sell Stock: BuyAndSellStock.md
-  - 六. LintCode Everyday:  
+  - 七. LintCode Everyday:  
       - 1. 双指针与滑动窗口: lintcode.md
       - 2. 哈希表: hashcode.md 
       - 3. 链表: linkedlist.md 
       - 4. 栈与队列: stack.md
-  - 七. 回顾:  review.md
-  - 八. Java:  other.md
+  - 八. 回顾:  review.md
+  - 九. Java:  other.md
 theme:
   name: 'material'
   font: 
