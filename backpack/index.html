@@ -277,8 +277,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../quickSort/" title="四. QuickSort" class="md-nav__link">
-      四. QuickSort
+    <a href="../hashtable/" title="四. hashtable" class="md-nav__link">
+      四. hashtable
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickSort/" title="五. QuickSort" class="md-nav__link">
+      五. QuickSort
     </a>
   </li>
 
@@ -292,14 +304,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
-      五. Dynamic Programming
+    <label class="md-nav__link" for="nav-6">
+      六. Dynamic Programming
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        五. Dynamic Programming
+      <label class="md-nav__title" for="nav-6">
+        六. Dynamic Programming
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -352,6 +364,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_1" title="实际问题" class="md-nav__link">
+    实际问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#backpackii-125" title="BackpackII 125" class="md-nav__link">
     BackpackII 125
   </a>
@@ -364,7 +383,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="完全背包" class="md-nav__link">
+  <a href="#_2" title="完全背包" class="md-nav__link">
     完全背包
   </a>
   
@@ -401,13 +420,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
-    <label class="md-nav__link" for="nav-5-2">
+    <label class="md-nav__link" for="nav-6-2">
       2. sequence
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
+      <label class="md-nav__title" for="nav-6-2">
         2. sequence
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -442,14 +461,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
-      六. LintCode Everyday
+    <label class="md-nav__link" for="nav-7">
+      七. LintCode Everyday
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        六. LintCode Everyday
+      <label class="md-nav__title" for="nav-7">
+        七. LintCode Everyday
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -513,8 +532,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../review/" title="七. 回顾" class="md-nav__link">
-      七. 回顾
+    <a href="../review/" title="八. 回顾" class="md-nav__link">
+      八. 回顾
     </a>
   </li>
 
@@ -525,8 +544,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../other/" title="八. Java" class="md-nav__link">
-      八. Java
+    <a href="../other/" title="九. Java" class="md-nav__link">
+      九. Java
     </a>
   </li>
 
@@ -567,6 +586,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_1" title="实际问题" class="md-nav__link">
+    实际问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#backpackii-125" title="BackpackII 125" class="md-nav__link">
     BackpackII 125
   </a>
@@ -579,7 +605,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="完全背包" class="md-nav__link">
+  <a href="#_2" title="完全背包" class="md-nav__link">
     完全背包
   </a>
   
@@ -657,6 +683,64 @@ f[i][j] = f[i-1][j] || (f[i-1][j-A[i-1]] | j-A[i-1] &gt;= 0) <br />
 </pre></div>
 
 </details>
+<h3 id="_1">实际问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>淘宝上的天猫超市有满199减100的活动，如何凑单能满199，并且尽量接近199？</p>
+<p>即求大于等于目标值的最小值，并且输出一种具体的方案。</p>
+<p>思路(求大于等于目标值的最小值)：</p>
+<p>f[i][j] means whether the former i number can make up j.</p>
+<p>在new f[n + 1][target + 1] 时将target扩大两倍,f[n + 1][target * 2 + 1]</p>
+<p>从f[n][target]开始寻找，若不为真，则将target += 1，直到f[n][target]为真。</p>
+<p>思路(输出一种具体的方案)：</p>
+<p>用pai[i][j] 表示拼出j的最后一个数可以是pai[i][j]</p>
+<details class="java实现"><summary>Java实现</summary><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Shopping</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">shoppingSnacks</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">prices</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">target</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="o">][</span><span class="n">target</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">pai</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="o">][</span><span class="n">target</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+        <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">f</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">prices</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">||</span> <span class="n">f</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">prices</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]];</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">f</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">prices</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]])</span> <span class="o">{</span>
+                        <span class="n">pai</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">prices</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">];</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 选择不小于目标值的最小值</span>
+        <span class="k">while</span> <span class="o">(!</span><span class="n">f</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">target</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">target</span><span class="o">++;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// 打印购物车清单  </span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">f</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">target</span><span class="o">])</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="n">target</span><span class="o">;</span>
+            <span class="kt">int</span> <span class="n">q</span> <span class="o">=</span> <span class="n">n</span><span class="o">;</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span><span class="o">);</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">p</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">pai</span><span class="o">[</span><span class="n">q</span><span class="o">][</span><span class="n">p</span><span class="o">]);</span>
+                <span class="n">p</span> <span class="o">-=</span> <span class="n">pai</span><span class="o">[</span><span class="n">q</span><span class="o">][</span><span class="n">p</span><span class="o">];</span>
+                <span class="n">q</span><span class="o">--;</span>
+                <span class="k">while</span> <span class="o">(</span><span class="n">pai</span><span class="o">[</span><span class="n">q</span><span class="o">][</span><span class="n">p</span><span class="o">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">q</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">q</span><span class="o">--;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;没有满足要求的方案&quot;</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+</details>
+<p>int[] arr = {2, 3, 5},int target = 8;
+<img alt="具体方案" src="https://s2.ax1x.com/2019/03/06/kvkhpn.png" /></p>
 <h3 id="backpackii-125"><a href="https://www.lintcode.com/problem/backpack-ii/description">BackpackII 125</a><a class="headerlink" href="#backpackii-125" title="Permanent link">&para;</a></h3>
 <p>f[i][j] means the maximum value of the former i number making up j.</p>
 <p><CENTER>
@@ -692,7 +776,7 @@ f[i][j] = max{f[i-1][j], f[i-1][j-A[i-1]] + V[i-1] | j-A[i-1] &gt;= 0}
 </pre></div>
 
 </details>
-<h2 id="_1">完全背包<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_2">完全背包<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="backpackiii-440"><a href="https://www.lintcode.com/problem/backpack-iii/description">BackpackIII 440</a><a class="headerlink" href="#backpackiii-440" title="Permanent link">&para;</a></h3>
 <p>f[i] means the maximum value of size i, if f[i] doen't exist,using Integer.MIN_VALUE to represent it.</p>
 <p><CENTER>
@@ -745,7 +829,7 @@ f[i] = max{f[i-A[j]] + V[j]}  <br />
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../quickSort/" title="四. QuickSort" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quickSort/" title="五. QuickSort" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -754,7 +838,7 @@ f[i] = max{f[i-A[j]] + V[j]}  <br />
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                四. QuickSort
+                五. QuickSort
               </span>
             </div>
           </a>
