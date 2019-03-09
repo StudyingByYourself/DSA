@@ -623,6 +623,7 @@ parent(i) = (i - 1) / 2</p>
 <details class="java"><summary>Java</summary><p>从最后一个非叶子结点开始执行shitDown()操作，并不断向前遍历到堆顶
 <div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="nf">MaxHeap</span><span class="o">(</span><span class="n">E</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">arr</span><span class="o">;</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">parent</span><span class="o">(</span><span class="n">arr</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
         <span class="n">shitDown</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
     <span class="o">}</span>
@@ -647,6 +648,7 @@ parent(i) = (i - 1) / 2</p>
 
     <span class="kd">public</span> <span class="nf">MaxHeap</span><span class="o">(</span><span class="n">E</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">arr</span><span class="o">;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
         <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">parent</span><span class="o">(</span><span class="n">arr</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
             <span class="n">shitDown</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
         <span class="o">}</span>
