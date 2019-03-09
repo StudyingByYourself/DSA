@@ -34,6 +34,7 @@ shitDown(下沉):不断与左孩子结点与右孩子结点中的较大值比较
 	```java
 	public MaxHeap(E[] arr) {
 		data = arr;
+		size = arr.length;
 		for (int i = parent(arr.length - 1); i >= 0; i--) {
 			shitDown(i);
 		}
@@ -60,6 +61,7 @@ shitDown(下沉):不断与左孩子结点与右孩子结点中的较大值比较
 
 		public MaxHeap(E[] arr) {
 			data = arr;
+			size = arr.length;
 			for (int i = parent(arr.length - 1); i >= 0; i--) {
 				shitDown(i);
 			}
