@@ -4,7 +4,7 @@ nav:
   - 二. Linear Structure: linear.md
   - 三. BinaryTree: 
       - 1. binaryTree: BinaryTree/binaryTree.md
-      - 2. maxHeap: maxHeap.md
+      - 2. maxHeap: BinaryTree/maxHeap.md
       - 3. bst: BinaryTree/binarySearchTree.md
       - 4. avlTree: BinaryTree/AVLTree.md
       - 5. rbTree: BinaryTree/redblackTree.md

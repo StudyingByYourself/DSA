@@ -1,18 +1,57 @@
-## 6.AVL树
+# AVL树
 
-### 6.1 AVL树的左旋与右旋
+## 1 AVL树的左旋与右旋
 
-#### 6.1.1 AVL树的左旋与右旋的规则
+### 1.1 AVL树的左旋与右旋的规则
 
 ![在这里插入图片描述](https://s2.ax1x.com/2019/01/21/kiHpY4.jpg)
 
-#### 6.1.2 AVL树的左旋与右旋的实例
+### 1.2 AVL树的左旋与右旋的实例
 
 备注：在左旋和右旋时需要重新计算height值
 
 ![在这里插入图片描述](https://s2.ax1x.com/2019/01/21/kibdUO.md.png)
 
-### 6.2 AVL树的整体代码
+??? 左旋与右旋
+	```java
+	// 右旋
+	//        y                            x
+	//       / \                        /     \
+	//      x   T4     向右旋转(y)     z       y
+	//     / \       - - - - - - ->   / \     / \
+	//    z   T3                    T1   T2 T3   T4
+	//   / \
+	// T1 T2
+	private Node rightRotate(Node y) {
+		Node x = y.left;
+		Node T3 = x.right;
+		x.right = y;
+		y.left = T3;
+		y.height = 1 + Math.max(getHeight(y.left), getHeight(y.right));
+		x.height = 1 + Math.max(getHeight(x.left), getHeight(x.right));
+		return x;
+	}
+
+	// 左旋
+	//    y                                   x
+	//   / \                               /     \
+	// T1   x           向左旋转(y)       y       z
+	//     / \          - - - - - - ->   / \     / \
+	//   T2   z                        T1   T2 T3   T4
+	//       / \
+	//     T3   T4	
+	private Node leftRotate(Node y) {
+		Node x = y.right;
+		Node T2 = x.left;
+		x.left = y;
+		y.right = T2;
+		y.height = 1 + Math.max(getHeight(y.left), getHeight(y.right));
+		x.height = 1 + Math.max(getHeight(x.left), getHeight(x.right));
+		return x;
+	}
+	```
+
+## 2 AVL树的整体代码
 
 ??? java版
 	```java
@@ -195,7 +234,7 @@
 		// 右旋
 		//        y                            x
 		//       / \                        /     \
-		//      x   T4              向右旋转(y)        z       y
+		//      x   T4     向右旋转(y)     z       y
 		//     / \       - - - - - - ->   / \     / \
 		//    z   T3                    T1   T2 T3   T4
 		//   / \
@@ -213,7 +252,7 @@
 		// 左旋
 		//    y                                   x
 		//   / \                               /     \
-		// T1   x              向左旋转(y)       y       z
+		// T1   x           向左旋转(y)       y       z
 		//     / \          - - - - - - ->   / \     / \
 		//   T2   z                        T1   T2 T3   T4
 		//       / \

@@ -1,8 +1,8 @@
 # Binary Search Tree
 
-## 5.二分搜索树(Binary Search Tree, BST)
+## 1.二分搜索树(Binary Search Tree, BST)
 
-### 5.1 二分搜索树的整体代码
+### 1.1 二分搜索树的整体代码
 
 ??? java版
 	```java
@@ -171,9 +171,9 @@
 		}
 	}
 	```
-### 5.2 add method 
+### 1.2 add method 
 
-####  5.2.1 非递归实现（not recursion）
+####  1.2.1 非递归实现（not recursion）
 
 ??? java版
 	```java
@@ -207,7 +207,7 @@
 	}
 	```
 
-####  5.2.2 递归实现（recursion）
+####  1.2.2 递归实现（recursion）
 
 ??? java版
 	```java
@@ -241,7 +241,7 @@
 	```
 
 
-####  5.2.3 递归实现（optimize and refactor recursion method）
+####  1.2.3 递归实现（optimize and refactor recursion method）
 
 ??? java版
 	```java
@@ -265,9 +265,9 @@
 	}
 	```
 
-### 5.3 search method
+### 1.3 search method
 
-####  5.3.1 非递归实现（not recursion）
+####  1.3.1 非递归实现（not recursion）
 
 ??? java版
 	```java
@@ -286,7 +286,7 @@
 	}
 	```
 
-####  5.3.2 递归实现（recursion）
+####  1.3.2 递归实现（recursion）
 
 ??? java版
 	```java
@@ -308,9 +308,9 @@
 	}
 	```
 
-### 5.4 traversal method
+### 1.4 traversal method
 
-####  5.4.1 非递归实现（not recursion）
+####  1.4.1 非递归实现（not recursion）
 
 ??? note "Stack实现preOrder"
 	```java
@@ -354,7 +354,7 @@
 	}
 	```
 
-####  5.4.2 递归实现（recursion）
+####  1.4.2 递归实现（recursion）
 
 ??? java版
 	```java
@@ -386,7 +386,7 @@
 	}
 	```
 
-### 5.5 判断是否为二分搜索树或者是否为平衡二叉树
+### 1.5 判断是否为二分搜索树或者是否为平衡二叉树
 
 ??? java版
 	```java
@@ -443,7 +443,7 @@
 	}
 	```
 
-### 5.6 二分搜索树的缺点
+### 1.6 二分搜索树的缺点
 
 当插入有序表时，会退化成一个链表
 
